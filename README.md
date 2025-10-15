@@ -49,7 +49,17 @@ Apply the Kubernetes manifests to deploy Ollama and Open WebUI to your EKS clust
 kubectl apply -f .\k8s\ollama.yaml -f .\k8s\webui.yaml
 ```
 
-### 4. Verify Deployment
+### 4. Pull an Ollama Model
+
+After Ollama is deployed, you'll want to pull a model. First, find the name of the Ollama pod, then execute a command inside it to pull a model (e.g., `llama2`).
+
+```bash
+OLLAMA_POD_NAME=$(kubectl get pods -l app=ollama -o jsonpath='{.items[0].metadata.name}')
+kubectl exec -it $OLLAMA_POD_NAME -- ollama run llama2
+```
+This command will pull the `llama2` model. You can replace `llama2` with any other model available on Ollama.
+
+### 5. Verify Deployment
 
 Check the status of your deployments and services.
 

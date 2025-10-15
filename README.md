@@ -93,6 +93,6 @@ You can modify these YAML files to adjust resource limits, environment variables
 ## Reference
 * [Open WebUI](https://github.com/open-webui/open-webui)
 * [Ollama](https://ollama.ai/)
-* [Configuration - Kubernetes] (https://github.com/open-webui/open-webui/tree/main/kubernetes/manifest/base)
+* [Configuration - Kubernetes](https://github.com/open-webui/open-webui/tree/main/kubernetes/manifest/base)
 * [EKS Module - Terraform](https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest)
 * [VPC Module - Terraform](https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest)
